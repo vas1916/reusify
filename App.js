@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Platform,
+  Dimensions,
+} from "react-native";
 
 export default function App() {
+  //These dimensions will be different for screen/window in Adnroid but not in iOS
+  console.log("@Window Dimensions", Dimensions.get("window"));
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <Text>Howdy React Native Sreeni's Reusify!</Text>
+        <StatusBar style="auto" />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "dodgerblue",
+    //alignItems: "center",
+    //height: "50%",
+    width: Platform.OS === "ios" && "30%",
+    //justifyContent: "center",
   },
 });
