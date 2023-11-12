@@ -20,3 +20,5 @@
 - Button - onPress={handleClick} (handleClick is a fn ref)
 - const styles = StyleSheet.create({backgroundColor:'Yellow'}) is used instead of const st yles={backgroundColor:'green'} because RN catches errors if any of the styles Prop is misspelled/ incorrect, where as in other way we will not be notified with the error.
 - ScreenOrientation Identification: we use react-native-community hooks(https://github.com/react-native-community/hooks) to
+- Added custom Text Component to customize styles Platform specific and reusable
+- To solve the duplication of using Platform.OS --> use Platform.select({})
