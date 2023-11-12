@@ -22,3 +22,4 @@
 - ScreenOrientation Identification: we use react-native-community hooks(https://github.com/react-native-community/hooks) to
 - Added custom Text Component to customize styles Platform specific and reusable
 - To solve the duplication of using Platform.OS --> use Platform.select({})
+- Create AppText.android.jsx and AppText.ios.jsx to implement platform specific custoizations/styles, but we just import as normal component (import AppText from "../components/AppText";)
