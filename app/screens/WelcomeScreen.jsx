@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   Image,
 } from "react-native";
+import AppText from "../components/AppText";
 
 const WelcomeScreen = () => {
   return (
@@ -16,7 +17,7 @@ const WelcomeScreen = () => {
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text>Trade to Reuse</Text>
+        <AppText>Trade to Reuse!</AppText>
       </View>
       <View style={styles.loginButton}></View>
       <View style={styles.registerButton}></View>
