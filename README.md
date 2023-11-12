@@ -18,5 +18,5 @@
   - TouchableHighlight,TouchableOpacity, TouchableWithoutFeedback - these are used to wrap image/ any element to perform touch events using onPress prop.
   - TouchableNativeFeedback - specific to Android if we use it for ios we get warning(in this case user Platform.OS!=='ios' and use this element if needed)
 - Button - onPress={handleClick} (handleClick is a fn ref)
-- const styles = StyleSheet.create({backgroundColor:'Yellow'}) is used instead of const styles={backgroundColor:'green'} because RN catches errors if any of the styles Prop is misspelled/ incorrect, where as in other way we will not be notified with the error.
+- const styles = StyleSheet.create({backgroundColor:'Yellow'}) is used instead of const st yles={backgroundColor:'green'} because RN catches errors if any of the styles Prop is misspelled/ incorrect, where as in other way we will not be notified with the error.
 - ScreenOrientation Identification: we use react-native-community hooks(https://github.com/react-native-community/hooks) to
