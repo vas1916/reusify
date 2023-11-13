@@ -23,3 +23,9 @@
 - Added custom Text Component to customize styles Platform specific and reusable
 - To solve the duplication of using Platform.OS --> use Platform.select({})
 - Create AppText.android.jsx and AppText.ios.jsx to implement platform specific custoizations/styles, but we just import as normal component (import AppText from "../components/AppText";)
+- Create AppButton
+- Create AppCard <AppCard titile="" subTitle="" imageURL="imagepath" />
+  Note: Don't pass the just image path as prop for the local assets it will throw error: Invalid call at line <linenumber>: require(imageURL).
+  Solution: pass it with require fn imageURL={require("../assets/jacket.jpg")}
+
+  - AppText.android.jsx and AppText.ios.jsx takes more preference over AppText.jsx , Make sure you delete these files if you want to consume AppText.jsx by default.
