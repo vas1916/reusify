@@ -17,7 +17,7 @@ const AppCard = ({ title, subTitle, imageURL }) => {
 const styles = StyleSheet.create({
   cardContainer: {
     borderRadius: 15,
-    backgroundColor: colors.black,
+    backgroundColor: colors.light,
     marginHorizontal: 15,
     marginBottom: 20,
     overflow: "hidden",

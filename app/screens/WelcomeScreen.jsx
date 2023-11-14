@@ -14,7 +14,8 @@ import AppCard from "../components/AppCard";
 import ListingDetailsScreen from "./ListingDetailsScreen";
 import { ViewImageScreen } from "./ViewImageScreen";
 import Messages from "./MessagesScreen";
-
+import AccountScreen from "./AccountScreen";
+import ListingsScreen from "./ListingsScreen";
 const WelcomeScreen = () => {
   return (
     <>
@@ -27,7 +28,9 @@ const WelcomeScreen = () => {
       </SafeAreaView> */}
       {/* <ListingDetailsScreen /> */}
       {/* <ViewImageScreen /> */}
-      <Messages />
+      {/* <Messages /> */}
+      {/* <AccountScreen /> */}
+      <ListingsScreen />
       <ImageBackground
         blurRadius={10}
         style={styles.background}

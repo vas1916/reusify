@@ -1,21 +1,25 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
 import React from "react";
 import AppText from "./AppText";
 import colors from "../config/colors";
 
-const ListItem = ({ image, title, subTitle }) => {
+const ListItem = ({ image, title, subTitle, IconComponent }) => {
   return (
     <View style={styles.listingContainer}>
-      <Image style={styles.image} source={image} />
-      <View>
-        <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.subTitle}>{subTitle}</AppText>
+      {IconComponent}
+      {image && <Image style={styles.image} source={image} />}
+      <View style={styles.container}>
+        {title && <AppText style={styles.title}>{title}</AppText>}
+        {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+  },
   image: {
     width: 80,
     height: 80,
@@ -24,7 +28,7 @@ const styles = StyleSheet.create({
   },
   listingContainer: {
     flexDirection: "row",
-    marginBottom: 10,
+    marginVertical: 10,
     marginLeft: 10,
   },
   title: {
