@@ -6,7 +6,10 @@ import {
   Platform,
 } from "react-native";
 import React from "react";
+import Constants from "expo-constants";
+
 import ListItem from "../components/ListItem";
+
 const messages = [
   {
     id: 1,
@@ -46,7 +49,8 @@ const Messages = () => {
 };
 const styles = StyleSheet.create({
   screen: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    //paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingTop: Constants.statusBarHeight,
   },
 });
 

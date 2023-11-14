@@ -24,6 +24,8 @@ const styles = StyleSheet.create({
   },
   listingContainer: {
     flexDirection: "row",
+    marginBottom: 10,
+    marginLeft: 10,
   },
   title: {
     fontSize: 20,

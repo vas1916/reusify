@@ -13,7 +13,7 @@ import AppButton from "../components/AppButton";
 import AppCard from "../components/AppCard";
 import ListingDetailsScreen from "./ListingDetailsScreen";
 import { ViewImageScreen } from "./ViewImageScreen";
-import Messages from "./Messages";
+import Messages from "./MessagesScreen";
 
 const WelcomeScreen = () => {
   return (
