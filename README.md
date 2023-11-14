@@ -29,3 +29,7 @@
   Solution: pass it with require fn imageURL={require("../assets/jacket.jpg")}
 
   - AppText.android.jsx and AppText.ios.jsx takes more preference over AppText.jsx , Make sure you delete these files if you want to consume AppText.jsx by default.
+
+- FlatList- renderItem={({ item }) => (<Component />)}
+  Note: should not change the item as it's the fixed variable name for object. if you change you can't render the Component.
+- SafeAreaView don't work in Andorid Phones/Emulators so we need to use StatusBar element from react-native

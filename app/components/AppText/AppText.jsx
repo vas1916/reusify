@@ -1,5 +1,7 @@
-import { View, Text, Platform, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
+
+import styles from "./styles";
 
 const AppText = ({ children, style }) => {
   return (
@@ -9,23 +11,4 @@ const AppText = ({ children, style }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  text: {
-    color: "tomato",
-    // to solve the duplication of using Platform.OS --> use Platform.select({})
-    // fontSize: Platform.OS === "ios" ? 18 : 20,
-    // fontFamily: Platform.OS === "ios" ? "Roboto" : "Avenir",
-    // spread the object returned by Platform.select
-    ...Platform.select({
-      iso: {
-        fontSize: 20,
-        fontFamily: "Avenir",
-      },
-      android: {
-        fontSize: 18,
-        fontFamily: "Roboto",
-      },
-    }),
-  },
-});
 export default AppText;

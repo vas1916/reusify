@@ -6,23 +6,28 @@ import {
   Text,
   SafeAreaView,
   Image,
+  ScrollView,
 } from "react-native";
 
 import AppButton from "../components/AppButton";
-
-import colors from "../config/colors";
 import AppCard from "../components/AppCard";
+import ListingDetailsScreen from "./ListingDetailsScreen";
+import { ViewImageScreen } from "./ViewImageScreen";
+import Messages from "./Messages";
 
 const WelcomeScreen = () => {
   return (
     <>
-      <SafeAreaView>
+      {/* <SafeAreaView>
         <AppCard
           title="Jacket"
           subTitle="$200"
           imageURL={require("../assets/jacket.jpg")}
         />
-      </SafeAreaView>
+      </SafeAreaView> */}
+      {/* <ListingDetailsScreen /> */}
+      {/* <ViewImageScreen /> */}
+      <Messages />
       <ImageBackground
         blurRadius={10}
         style={styles.background}
