@@ -13,7 +13,7 @@ import AppButton from "../components/AppButton";
 import AppCard from "../components/AppCard";
 import ListingDetailsScreen from "./ListingDetailsScreen";
 import { ViewImageScreen } from "./ViewImageScreen";
-import Messages from "./MessagesScreen";
+import MessagesScreen from "./MessagesScreen";
 import AccountScreen from "./AccountScreen";
 import ListingsScreen from "./ListingsScreen";
 const WelcomeScreen = () => {
@@ -28,10 +28,10 @@ const WelcomeScreen = () => {
       </SafeAreaView> */}
       {/* <ListingDetailsScreen /> */}
       {/* <ViewImageScreen /> */}
-      {/* <Messages /> */}
+      <MessagesScreen />
       {/* <AccountScreen /> */}
-      <ListingsScreen />
-      <ImageBackground
+      {/* <ListingsScreen /> */}
+      {/* <ImageBackground
         blurRadius={10}
         style={styles.background}
         source={require("../assets/background.jpg")}
@@ -55,7 +55,7 @@ const WelcomeScreen = () => {
             onPress={() => console.log("Register")}
           />
         </View>
-      </ImageBackground>
+      </ImageBackground> */}
     </>
   );
 };

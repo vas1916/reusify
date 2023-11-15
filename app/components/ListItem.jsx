@@ -1,18 +1,36 @@
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, TouchableHighlight } from "react-native";
 import React from "react";
+
 import AppText from "./AppText";
 import colors from "../config/colors";
+import AppSwipeable from "./AppSwipeable";
 
-const ListItem = ({ image, title, subTitle, IconComponent }) => {
+const ListItem = ({
+  image,
+  title,
+  subTitle,
+  IconComponent,
+  onPress,
+  renderRightActions,
+}) => {
+  const onDeleteIconClick = () => {};
   return (
-    <View style={styles.listingContainer}>
-      {IconComponent}
-      {image && <Image style={styles.image} source={image} />}
-      <View style={styles.container}>
-        {title && <AppText style={styles.title}>{title}</AppText>}
-        {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
-      </View>
-    </View>
+    <AppSwipeable
+      renderRightActions={renderRightActions}
+      onPress={onDeleteIconClick}
+      actionLabel={"Delete"}
+    >
+      <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
+        <View style={styles.listingContainer}>
+          {IconComponent}
+          {image && <Image style={styles.image} source={image} />}
+          <View style={styles.container}>
+            {title && <AppText style={styles.title}>{title}</AppText>}
+            {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
+          </View>
+        </View>
+      </TouchableHighlight>
+    </AppSwipeable>
   );
 };
 

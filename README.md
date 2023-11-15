@@ -34,3 +34,11 @@
   Note: should not change the item as it's the fixed variable name for object. if you change you can't render the Component.
 - SafeAreaView don't work in Andorid Phones/Emulators so we need to use StatusBar element from react-native
 - Alternative way to mitigate SafeAreaView issue is using expo-constants
+- Instead of FlatList we can use SelectionList if the AccountScreen has more/complicated list items to display
+
+- Add jsconfig.json file with below lines
+  {
+  "exclude": ["node_modules"]
+  }
+  if auto imports don't work in the project.
+-
