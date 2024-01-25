@@ -41,6 +41,7 @@ const AccountScreen = () => {
               title={item.title}
               IconComponent={
                 <Icon
+                  size={30}
                   name={item?.icon.name}
                   backgroundColor={item?.icon.backgroundColor}
                 />
@@ -52,7 +53,9 @@ const AccountScreen = () => {
       <View>
         <ListItem
           title="Logout"
-          IconComponent={<Icon name={"logout"} backgroundColor={"#ffe66d"} />}
+          IconComponent={
+            <Icon size={30} name={"logout"} backgroundColor={"#ffe66d"} />
+          }
         />
       </View>
     </Screen>

@@ -21,6 +21,7 @@
       "bundleIdentifier": "com.sreenivasareddy.reusify"
     },
     "android": {
+      "permissions": ["CAMERA_ROLL"],
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
